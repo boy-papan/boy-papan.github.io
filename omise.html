@@ -2,21 +2,21 @@
 <head>
 </head>
 <body>
-<form name="checkoutForm" method="POST" action="checkout.php">
-  <script type="text/javascript" src="https://cdn.omise.co/omise.js"
-    data-key="pkey_test_52jyu0r8o4307z0zz00"
-    data-image="http://bit.ly/customer_image"
-    data-frame-label="Merchant site name"
-    data-button-label="Pay now"
-    data-submit-label="Submit"
-    data-location="no"
-    data-amount="10025"
-    data-currency="thb"
-    >
-  </script>
-  <!--the script will render <input type="hidden" name="omiseToken"> for you automatically-->
-</form>
-
-<!-- data-key="YOUR_PUBLIC_KEY" -->
+<form id="myform" method="post" action="https://demo2.2c2p.com/2C2PFrontEnd/RedirectV3/payment">
+		<input type="hidden" name="version" value="8.5"/>
+		<input type="hidden" name="merchant_id" value="JT01"/>
+		<input type="hidden" name="currency" value="702"/>
+		<input type="hidden" name="result_url_1" value="http://localhost:3000"/>
+		<input type="hidden" name="hash_value" value="8aaefcb35296fc210411e2bfc4682080db9042e118679fb9034ce922d60dec35"/>
+		PRODUCT INFO : <input type="text" name="payment_description" value="2 days 1 night hotel room"  readonly/><br/>
+		ORDER NO : <input type="text" name="order_id" value="1596697932064"  readonly/><br/>
+		AMOUNT: <input type="text" name="amount" value="000000002500" readonly/><br/>
+		<input type="submit" name="submit" value="Confirm" />
+	</form>
+  <script type="text/javascript">
+    timeout(function(){
+		  document.forms.myform.submit();
+    }, 3000);
+	</script>
 </body>
 </html>
